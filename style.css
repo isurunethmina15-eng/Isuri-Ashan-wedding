@@ -1,0 +1,1105 @@
+/* =========================================
+   ISURI & ASHAN WEDDING INVITATION
+   Ivory | Champagne Gold | Lotus Theme
+   Fully Responsive Design
+========================================= */
+
+
+/* =========================================
+   1. AURORA FONT
+========================================= */
+
+@font-face {
+    font-family: "Aurora";
+    src: url("../fonts/Aurora-gx4V6.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* =========================================
+   2. ROOT VARIABLES
+========================================= */
+
+:root {
+    --ivory: #f8f3ea;
+    --paper: #fffdf8;
+    --gold: #b38a4a;
+    --gold-dark: #80602f;
+    --ink: #3c3028;
+    --muted: #807267;
+    --line: #dfcfb3;
+    --rose: #ead9ce;
+}
+
+
+/* =========================================
+   3. GLOBAL STYLES
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+
+    color: var(--ink);
+    background: var(--ivory);
+
+    font-family: "Poppins", "Noto Serif Sinhala", sans-serif;
+    line-height: 1.7;
+}
+
+button,
+a {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+
+/* =========================================
+   4. LANGUAGE BAR
+========================================= */
+
+.language-bar {
+    position: absolute;
+    z-index: 10;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px clamp(18px, 5vw, 70px);
+
+    color: var(--paper);
+}
+
+.mini-brand {
+    font-family: "Cinzel", serif;
+    letter-spacing: 3px;
+    font-size: 18px;
+}
+
+.mini-brand span {
+    color: #e6c990;
+}
+
+.language-switch {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+
+    border: 1px solid rgba(255,255,255,.45);
+    border-radius: 100px;
+
+    background: rgba(40,30,24,.2);
+    backdrop-filter: blur(8px);
+}
+
+.lang-btn {
+    border: 0;
+    border-radius: 100px;
+
+    padding: 8px 14px;
+
+    background: transparent;
+    color: white;
+
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.lang-btn.active {
+    background: var(--paper);
+    color: var(--gold-dark);
+}
+
+
+/* =========================================
+   5. HERO SECTION
+========================================= */
+
+.hero {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    width: 100%;
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+    isolation: isolate;
+
+    text-align: center;
+    color: var(--paper);
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(40,28,22,.79),
+            rgba(70,48,33,.47),
+            rgba(37,28,22,.78)
+        ),
+        url("../images/background.jpg") center/cover,
+        radial-gradient(circle at 50% 35%, #927451, #38271f 72%);
+}
+
+
+/* BACKGROUND VIDEO */
+
+.background-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+/* HERO OVERLAY */
+
+.hero-overlay {
+    position: absolute;
+    inset: 18px;
+
+    border: 1px solid rgba(226,196,137,.6);
+
+    pointer-events: none;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(760px, 92%);
+
+    padding: 110px 12px 90px;
+
+    margin: auto;
+
+    animation: rise-in 1.2s ease both;
+}
+
+
+/* =========================================
+   6. BRIDE & GROOM FONT
+========================================= */
+
+.eyebrow,
+.section-kicker {
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+.eyebrow {
+    color: #e7d4b1;
+    margin-bottom: 14px;
+}
+
+.lotus-mark {
+    font-size: 43px;
+    color: #e4c58c;
+    line-height: 1.2;
+    margin: 12px 0;
+}
+
+
+/* AURORA FONT */
+
+.hero h1 {
+    margin: 4px 0 14px;
+
+    font-weight: 400;
+    font-family: "Aurora", cursive;
+
+    font-size: clamp(64px, 11vw, 112px);
+    line-height: 1.2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.hero h1 span {
+    display: inline-block;
+    font-family: "Aurora", cursive;
+    white-space: nowrap;
+}
+
+.hero h1 em {
+    font-family: "Cinzel", serif;
+    font-style: normal;
+
+    font-size: .35em;
+    color: #e7c88d;
+
+    margin: 0 18px;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+
+/* HERO SUBTITLE */
+
+.hero-subtitle {
+    font-family: "Noto Serif Sinhala", serif;
+
+    font-size: clamp(14px, 2vw, 17px);
+
+    color: #f0e7d9;
+
+    margin: 14px auto 22px;
+}
+
+.gold-line {
+    width: 90px;
+    height: 1px;
+
+    margin: 24px auto;
+
+    background: #d6b77d;
+}
+
+.wedding-date {
+    font-family: "Cinzel", serif;
+
+    letter-spacing: 2px;
+    font-size: 12px;
+
+    color: #f1d9a9;
+}
+
+
+/* =========================================
+   7. BUTTONS
+========================================= */
+
+.open-btn {
+    display: inline-flex;
+
+    gap: 22px;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 22px;
+    padding: 13px 24px;
+
+    border: 1px solid #d7b777;
+
+    color: #fffaf1;
+    background: rgba(179,138,74,.16);
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: .25s ease;
+    letter-spacing: .4px;
+
+    max-width: 100%;
+}
+
+.open-btn:hover {
+    background: #b38a4a;
+    transform: translateY(-2px);
+}
+
+.scroll-hint {
+    margin-top: 24px;
+
+    color: #dfd1bd;
+
+    font-family: "Noto Serif Sinhala", serif;
+    font-size: 12px;
+}
+
+
+/* HERO BOTTOM */
+
+.hero-bottom {
+    position: absolute;
+
+    bottom: 26px;
+    left: 0;
+    right: 0;
+
+    color: #d7bd8e;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+
+/* DECORATIVE MANDALA */
+
+.mandala {
+    position: absolute;
+
+    color: rgba(223,190,131,.14);
+
+    font-size: clamp(160px,28vw,360px);
+    line-height: 1;
+
+    pointer-events: none;
+}
+
+.mandala-one {
+    left: -.08em;
+    top: 10%;
+}
+
+.mandala-two {
+    right: -.08em;
+    bottom: 2%;
+}
+
+
+/* =========================================
+   8. GENERAL SECTIONS
+========================================= */
+
+.section-wrap {
+    width: min(1000px, 90%);
+    margin: 0 auto;
+
+    padding: 90px 0;
+
+    text-align: center;
+}
+
+.section-kicker {
+    color: var(--gold-dark);
+    margin: 0 0 14px;
+}
+
+h2 {
+    font-family: "Cinzel", "Noto Serif Sinhala", serif;
+
+    font-weight: 400;
+
+    font-size: clamp(27px,4vw,40px);
+    line-height: 1.5;
+
+    margin: 0 0 24px;
+
+    overflow-wrap: anywhere;
+}
+
+.body-copy {
+    max-width: 660px;
+    margin: 0 auto;
+
+    color: var(--muted);
+
+    font-family: "Noto Serif Sinhala", "Poppins", serif;
+    font-size: 15px;
+
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================
+   9. COUPLE MONOGRAM
+========================================= */
+
+.couple-monogram {
+    margin: 36px auto 0;
+
+    width: 94px;
+    height: 94px;
+
+    border: 1px solid var(--line);
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    font-family: "Cinzel", serif;
+    font-size: 22px;
+
+    color: var(--gold-dark);
+}
+
+.couple-monogram span {
+    color: var(--gold);
+    font-size: 14px;
+    margin: 0 3px;
+}
+
+
+/* =========================================
+   10. COUNTDOWN
+========================================= */
+
+.countdown-section {
+    background: #eee4d4;
+
+    border-top: 1px solid #e2d2b7;
+    border-bottom: 1px solid #e2d2b7;
+}
+
+.countdown-section .section-wrap {
+    padding: 72px 0;
+}
+
+.countdown {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    justify-content: center;
+
+    gap: clamp(10px, 4vw, 48px);
+
+    max-width: 600px;
+    margin: 34px auto 0;
+}
+
+.countdown div {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.countdown strong {
+    font-family: "Cinzel", serif;
+
+    font-size: clamp(28px,5vw,44px);
+    font-weight: 400;
+
+    color: var(--gold-dark);
+}
+
+.countdown span {
+    color: var(--muted);
+
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   11. WEDDING DETAILS
+========================================= */
+
+.details-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2,minmax(0,1fr));
+
+    gap: 22px;
+    margin-top: 38px;
+}
+
+.detail-card {
+    min-width: 0;
+
+    background: rgba(255,253,248,.75);
+
+    border: 1px solid var(--line);
+
+    padding: 32px 22px;
+
+    overflow-wrap: break-word;
+}
+
+.detail-icon {
+    color: var(--gold);
+    font-size: 30px;
+}
+
+.detail-card h3 {
+    font-family: "Cinzel", "Noto Serif Sinhala", serif;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    overflow-wrap: anywhere;
+}
+
+.detail-card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.detail-card .muted {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.text-link {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    color: var(--gold-dark);
+
+    font-size: 12px;
+    text-underline-offset: 4px;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   12. PHOTO GALLERY
+========================================= */
+
+.gallery-section {
+    background: #f0e6d8;
+}
+
+.gallery-section .section-wrap {
+    padding: 84px 0;
+}
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3,minmax(0,1fr));
+
+    gap: 18px;
+    margin-top: 36px;
+}
+
+.photo-placeholder {
+    min-width: 0;
+    min-height: 280px;
+
+    display: grid;
+    place-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid #d8c4a3;
+
+    background:
+        linear-gradient(
+            145deg,
+            #d9c6aa,
+            #f5e8d3 50%,
+            #b7a084
+        );
+}
+
+.photo-placeholder::before,
+.photo-placeholder::after {
+    content: "";
+
+    position: absolute;
+
+    border: 1px solid rgba(255,255,255,.65);
+    border-radius: 50%;
+
+    width: 180px;
+    height: 180px;
+}
+
+.photo-placeholder::after {
+    width: 130px;
+    height: 130px;
+}
+
+.photo-placeholder span {
+    position: relative;
+    z-index: 1;
+
+    color: #735b3c;
+
+    letter-spacing: 3px;
+    font-size: 10px;
+}
+
+.photo-two {
+    background: linear-gradient(
+        145deg,
+        #c9b5a5,
+        #f1dfd1 50%,
+        #ad8e7d
+    );
+}
+
+.photo-three {
+    background: linear-gradient(
+        145deg,
+        #e2d2ad,
+        #f9f0df 50%,
+        #bda477
+    );
+}
+
+
+/* =========================================
+   13. RSVP SECTION
+========================================= */
+
+.rsvp-section {
+    padding-bottom: 100px;
+}
+
+.rsvp-btn {
+    color: var(--gold-dark);
+    background: transparent;
+}
+
+.rsvp-btn:hover {
+    color: white;
+}
+
+.small-note {
+    color: #978a7d;
+    font-size: 10px;
+
+    margin-top: 18px;
+}
+
+
+/* =========================================
+   14. FOOTER
+========================================= */
+
+footer {
+    text-align: center;
+
+    padding: 35px 15px 45px;
+
+    background: #3a2a22;
+    color: #d9c9b1;
+}
+
+.footer-flower {
+    color: #d5b578;
+    font-size: 28px;
+}
+
+.footer-names {
+    font-family: "Aurora", cursive;
+
+    font-size: 38px;
+    margin: 4px 0;
+
+    color: #fff8ec;
+}
+
+.footer-names span {
+    font-family: "Cinzel", serif;
+
+    font-size: 18px;
+    color: #d5b578;
+}
+
+footer p:last-child {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   15. INVITATION CONTENT ANIMATION
+========================================= */
+
+.invitation-content {
+    display: none;
+    opacity: 0;
+}
+
+.invitation-content.visible {
+    display: block;
+    animation: fade-in .8s ease forwards;
+}
+
+@keyframes rise-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   16. SINHALA LANGUAGE
+========================================= */
+
+body.lang-si {
+    font-family: "Noto Serif Sinhala", "Poppins", sans-serif;
+}
+
+body.lang-si h2,
+body.lang-si h3 {
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   17. TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hero-content {
+        width: 94%;
+    }
+
+    .hero h1 {
+        font-size: clamp(58px, 10vw, 90px);
+    }
+
+    .hero h1 em {
+        margin: 0 12px;
+    }
+
+    .section-wrap {
+        width: 88%;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+
+    .photo-three {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================
+   18. MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 640px) {
+
+    /* LANGUAGE BAR */
+
+    .language-bar {
+        padding: 14px 16px;
+    }
+
+    .mini-brand {
+        font-size: 15px;
+    }
+
+    .lang-btn {
+        padding: 7px 11px;
+        font-size: 11px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 100vh;
+        min-height: 100svh;
+    }
+
+    .hero-overlay {
+        inset: 10px;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 105px 12px 85px;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 12vw, 68px);
+        line-height: 1.25;
+    }
+
+    .hero h1 em {
+        margin: 0 clamp(5px, 2vw, 10px);
+    }
+
+    .eyebrow {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .lotus-mark {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+        padding: 0 8px;
+    }
+
+    .wedding-date {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .open-btn {
+        padding: 12px 19px;
+        gap: 14px;
+        font-size: 13px;
+    }
+
+    .scroll-hint {
+        font-size: 11px;
+        padding: 0 10px;
+    }
+
+    .hero-bottom {
+        bottom: 17px;
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+
+    /* GENERAL SECTIONS */
+
+    .section-wrap {
+        width: 88%;
+        padding: 65px 0;
+    }
+
+    h2 {
+        font-size: clamp(25px, 7vw, 32px);
+    }
+
+    .section-kicker {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .body-copy {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+
+    /* COUNTDOWN */
+
+    .countdown-section .section-wrap {
+        padding: 60px 0;
+    }
+
+    .countdown {
+        grid-template-columns: repeat(4, minmax(0,1fr));
+        gap: 7px;
+        margin-top: 28px;
+    }
+
+    .countdown div {
+        min-width: 0;
+    }
+
+    .countdown strong {
+        font-size: clamp(23px, 7vw, 34px);
+    }
+
+    .countdown span {
+        font-size: 7px;
+        letter-spacing: .5px;
+    }
+
+
+    /* WEDDING DETAILS */
+
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 28px;
+    }
+
+    .detail-card {
+        padding: 26px 18px;
+    }
+
+    .detail-card h3 {
+        font-size: 17px;
+    }
+
+
+    /* GALLERY */
+
+    .gallery-section .section-wrap {
+        padding: 65px 0;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .photo-three {
+        grid-column: auto;
+    }
+
+    .photo-placeholder {
+        min-height: 250px;
+    }
+
+
+    /* RSVP */
+
+    .rsvp-section {
+        padding-bottom: 70px;
+    }
+
+    .small-note {
+        font-size: 9px;
+        line-height: 1.8;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 30px 12px 35px;
+    }
+
+    .footer-names {
+        font-size: 34px;
+    }
+
+    footer p:last-child {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+}
+
+
+/* =========================================
+   19. SMALL MOBILE DEVICES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .hero-content {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .hero h1 {
+        font-size: clamp(36px, 11.5vw, 44px);
+    }
+
+    .hero h1 em {
+        margin: 0 4px;
+    }
+
+    .hero-subtitle {
+        font-size: 12px;
+    }
+
+    .wedding-date {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .countdown {
+        gap: 4px;
+    }
+
+    .countdown strong {
+        font-size: 23px;
+    }
+
+    .countdown span {
+        font-size: 6px;
+    }
+
+    .language-bar {
+        padding: 12px;
+    }
+
+}
+
+
+/* =========================================
+   20. LANDSCAPE MOBILE
+========================================= */
+
+@media (max-height: 500px) and (max-width: 900px) {
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-content {
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+}
+
+
+/* =========================================
+   21. REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+
+}
+
+
+/* =========================================
+   END OF RESPONSIVE CSS
+========================================= */
